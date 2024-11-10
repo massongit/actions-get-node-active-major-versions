@@ -1,4 +1,5 @@
 # actions-get-node-active-major-versions
+
 ${DESCRIPTION}
 
 For example, it's result is given to `matrix` to test using active Node.js versions.

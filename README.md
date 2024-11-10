@@ -28,10 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          cache: "npm"
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run test
 ```
 
 ## Development

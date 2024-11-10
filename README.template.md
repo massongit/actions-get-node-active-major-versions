@@ -2,7 +2,7 @@
 
 ${DESCRIPTION}
 
-Node.js version data gets from <https://github.com/nodejs/Release/blob/main/schedule.json>.
+Node.js version data is got from <https://github.com/nodejs/Release/blob/main/schedule.json>.
 
 For example, it's result is given to `matrix` to test using active Node.js versions.
 

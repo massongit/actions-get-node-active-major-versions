@@ -9,7 +9,7 @@ For example, it's result is given to `matrix` to test using active Node.js versi
 ```yaml
 on:
   pull_request:
-permissions: {}
+permissions: { }
 jobs:
   get-node-active-major-versions:
     runs-on: ubuntu-latest
@@ -28,10 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          cache: "npm"
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run test
 ```
 
 ## Development

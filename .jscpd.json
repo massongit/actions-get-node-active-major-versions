@@ -1,6 +1,11 @@
 {
   "threshold": 0,
   "reporters": ["consoleFull"],
-  "ignore": ["**/__snapshots__/**", "**/node_modules/**", "**/dist/**", "README*.md"],
+  "ignore": [
+    "**/__snapshots__/**",
+    "**/node_modules/**",
+    "**/dist/**",
+    "README*.md"
+  ],
   "absolute": true
 }

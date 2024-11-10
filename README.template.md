@@ -1,6 +1,6 @@
 # actions-get-node-active-major-versions
 
-GitHub Actions to get Node.js LTS and maintenance major versions.
+${DESCRIPTION}
 
 Node.js version data is got from <https://github.com/nodejs/Release/blob/main/schedule.json>.
 

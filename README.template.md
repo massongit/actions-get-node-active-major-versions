@@ -1,5 +1,5 @@
 # actions-get-node-active-major-versions
-GitHub Actions to get Node.js LTS and maintenance major versions.
+${DESCRIPTION}
 
 For example, it's result is given to `matrix` to test using active Node.js versions.
 
@@ -8,26 +8,26 @@ For example, it's result is given to `matrix` to test using active Node.js versi
 ```yaml
 on:
   pull_request:
-
+permissions: {}
 jobs:
   get-node-active-major-versions:
     runs-on: ubuntu-latest
+    outputs:
+      versions: ${{steps.get_versions.outputs.versions}}
     steps:
-      - uses: dev-hato/actions-get-node-active-major-versions@v1
-
+      - id: get_versions
+        uses: dev-hato/actions-get-node-active-major-versions@v1
   test:
     runs-on: ubuntu-latest
     needs: get-node-active-major-versions
     strategy:
       matrix:
-        node-version: ${{needs.get-node-active-major-versions.outputs.versions}}
+        node-version: ${{fromJson(needs.get-node-active-major-versions.outputs.versions)}}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          cache: "npm"
           node-version: ${{ matrix.node-version }}
-      - run: npm run test
 ```
 
 ## Development

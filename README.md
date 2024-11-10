@@ -2,6 +2,8 @@
 
 GitHub Actions to get Node.js LTS and maintenance major versions.
 
+Node.js version data is got from <https://github.com/nodejs/Release/blob/main/schedule.json>.
+
 For example, it's result is given to `matrix` to test using active Node.js versions.
 
 ## Usage

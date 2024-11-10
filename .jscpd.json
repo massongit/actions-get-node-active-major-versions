@@ -5,8 +5,8 @@
     "**/__snapshots__/**",
     "**/node_modules/**",
     "**/dist/**",
-    "README.md",
-    "README.template.md"
+    "**/README.md",
+    "**/README.template.md"
   ],
   "absolute": true
 }

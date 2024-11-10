@@ -1,0 +1,15 @@
+name: "get-node-active-major-versions"
+author: "Masaya Suzuki"
+description: "GitHub Actions to get Node.js LTS and maintenance major versions."
+runs:
+  using: "composite"
+  outputs:
+    versions: ${{ steps.get_versions.outputs.result }}
+  steps:
+    - name: Get versions
+      id: get_versions
+      uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+      with:
+        script: |
+          const {script} = require('${{ github.action_path }}/dist/get_version.js')
+          return await script()

@@ -9,7 +9,7 @@ For example, it's result is given to `matrix` to test using active Node.js versi
 ```yaml
 on:
   pull_request:
-permissions: { }
+permissions: {}
 jobs:
   get-node-active-major-versions:
     runs-on: ubuntu-latest

@@ -2,8 +2,8 @@
   "devDependencies": {
     "@proofdict/textlint-rule-proofdict": "3.1.2",
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "2.0.1",
-    "esbuild": "^0.24.0",
-    "node-fetch": "^3.3.2",
+    "esbuild": "0.24.0",
+    "node-fetch": "3.3.2",
     "prettier": "3.3.3",
     "textlint": "14.3.0",
     "textlint-filter-rule-comments": "1.2.2",
@@ -19,8 +19,8 @@
     "textlint-rule-preset-ja-spacing": "2.4.3",
     "textlint-rule-preset-ja-technical-writing": "10.0.1",
     "textlint-rule-terminology": "5.2.12",
-    "tsc": "^2.0.4",
-    "typescript": "^5.4.5"
+    "tsc": "2.0.4",
+    "typescript": "5.4.5"
   },
   "engines": {
     "node": "^22.8.0"

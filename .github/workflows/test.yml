@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: get_versions
         uses: ./
-  test:
+  setup_node:
     runs-on: ubuntu-latest
     needs: get-node-active-major-versions
     strategy:

@@ -6,9 +6,12 @@ on:
 jobs:
   get-node-active-major-versions:
     runs-on: ubuntu-latest
+    outputs:
+      versions: ${{steps.get_versions.outputs.versions}}
     steps:
       - uses: actions/checkout@v4
-      - uses: ./
+      - id: get_versions
+        uses: ./
 
   test:
     runs-on: ubuntu-latest

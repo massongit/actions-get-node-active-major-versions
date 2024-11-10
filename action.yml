@@ -1,10 +1,12 @@
 name: "get-node-active-major-versions"
 author: "Masaya Suzuki"
 description: "GitHub Actions to get Node.js LTS and maintenance major versions."
+outputs:
+  versions:
+    description: "Node.js LTS and maintenance major version"
+    value: ${{ steps.get_versions.outputs.result }}
 runs:
   using: "composite"
-  outputs:
-    versions: ${{ steps.get_versions.outputs.result }}
   steps:
     - name: Get versions
       id: get_versions

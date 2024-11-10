@@ -15,7 +15,7 @@ jobs:
     needs: get-node-active-major-versions
     strategy:
       matrix:
-        node-version: ${{needs.get-node-active-major-versions.outputs.versions}}
+        node-version: ${{fromJson(needs.get-node-active-major-versions.outputs.versions)}}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

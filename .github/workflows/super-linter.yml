@@ -60,6 +60,8 @@ jobs:
           DEFAULT_BRANCH: main
           LINTER_RULES_PATH: .
           TYPESCRIPT_DEFAULT_STYLE: prettier
+          VALIDATE_BIOME_FORMAT: false
+          VALIDATE_BIOME_LINT: false
           VALIDATE_TYPESCRIPT_STANDARD: false
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}

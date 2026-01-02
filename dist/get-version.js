@@ -6391,7 +6391,7 @@ async function script() {
   const supportedVersions = [];
   for (const version in json) {
     const { lts, end } = json[version];
-    if (lts !== void 0 && /* @__PURE__ */ new Date(lts + "T00:00:00Z") <= now && now < /* @__PURE__ */ new Date(end + "T00:00:00Z")) {
+    if (lts !== void 0 && /* @__PURE__ */ new Date(`${lts}T00:00:00Z`) <= now && now < /* @__PURE__ */ new Date(`${end}T00:00:00Z`)) {
       supportedVersions.push(Number(version.replace(/^v/, "")));
     }
   }

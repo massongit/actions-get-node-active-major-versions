@@ -21,8 +21,8 @@ export async function script(): Promise<number[]> {
     const { lts, end } = json[version];
     if (
       lts !== undefined &&
-      new Date(lts + "T00:00:00Z") <= now &&
-      now < new Date(end + "T00:00:00Z")
+      new Date(`${lts}T00:00:00Z`) <= now &&
+      now < new Date(`${end}T00:00:00Z`)
     ) {
       supportedVersions.push(Number(version.replace(/^v/, "")));
     }

@@ -23,6 +23,7 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
       - uses: dev-hato/actions-format-json-yml@27c5137f7138a4817ae532f10e5506c925e88f96 # v0.0.84
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

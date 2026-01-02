@@ -95,6 +95,12 @@ export default defineConfig([
         },
       },
     },
+
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
   },
   {
     files: ["**/*.ts", "**/*.cts", "**/*.mts", "**/*.tsx"],
@@ -114,6 +120,12 @@ export default defineConfig([
       parser: tsParser,
       ecmaVersion: "latest",
       sourceType: "module",
+    },
+
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
   },
   {

@@ -1,12 +1,12 @@
 {
-  "threshold": 0,
-  "reporters": ["consoleFull"],
-  "ignore": [
-    "**/__snapshots__/**",
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/README.md",
-    "**/README.template.md"
-  ],
-  "absolute": true
+	"threshold": 0,
+	"reporters": ["consoleFull"],
+	"ignore": [
+		"**/__snapshots__/**",
+		"**/node_modules/**",
+		"**/dist/**",
+		"**/README.md",
+		"**/README.template.md"
+	],
+	"absolute": true
 }

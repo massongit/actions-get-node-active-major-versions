@@ -24,7 +24,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: false
-      - uses: dev-hato/actions-format-json-yml@27c5137f7138a4817ae532f10e5506c925e88f96 # v0.0.84
+      - uses: dev-hato/actions-format-json-yml@5465272ec5e18446182b39f4a7f817a67d16875a # v0.0.96
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 concurrency:

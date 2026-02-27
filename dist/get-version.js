@@ -38,7 +38,7 @@ var require_ponyfill_es2018 = __commonJS({
   "node_modules/web-streams-polyfill/dist/ponyfill.es2018.js"(exports2, module2) {
     (function(global2, factory) {
       typeof exports2 === "object" && typeof module2 !== "undefined" ? factory(exports2) : typeof define === "function" && define.amd ? define(["exports"], factory) : (global2 = typeof globalThis !== "undefined" ? globalThis : global2 || self, factory(global2.WebStreamsPolyfill = {}));
-    })(exports2, function(exports3) {
+    })(exports2, (function(exports3) {
       "use strict";
       function noop2() {
         return void 0;
@@ -198,11 +198,11 @@ var require_ponyfill_es2018 = __commonJS({
           return front._elements[cursor];
         }
       }
-      const AbortSteps = Symbol("[[AbortSteps]]");
-      const ErrorSteps = Symbol("[[ErrorSteps]]");
-      const CancelSteps = Symbol("[[CancelSteps]]");
-      const PullSteps = Symbol("[[PullSteps]]");
-      const ReleaseSteps = Symbol("[[ReleaseSteps]]");
+      const AbortSteps = /* @__PURE__ */ Symbol("[[AbortSteps]]");
+      const ErrorSteps = /* @__PURE__ */ Symbol("[[ErrorSteps]]");
+      const CancelSteps = /* @__PURE__ */ Symbol("[[CancelSteps]]");
+      const PullSteps = /* @__PURE__ */ Symbol("[[PullSteps]]");
+      const ReleaseSteps = /* @__PURE__ */ Symbol("[[ReleaseSteps]]");
       function ReadableStreamReaderGenericInitialize(reader, stream) {
         reader._ownerReadableStream = stream;
         stream._reader = reader;
@@ -643,9 +643,9 @@ var require_ponyfill_es2018 = __commonJS({
         const syncIterable = {
           [Symbol.iterator]: () => syncIteratorRecord.iterator
         };
-        const asyncIterator = async function* () {
+        const asyncIterator = (async function* () {
           return yield* syncIterable;
-        }();
+        })();
         const nextMethod = asyncIterator.next;
         return { iterator: asyncIterator, nextMethod, done: false };
       }
@@ -4304,7 +4304,7 @@ var require_ponyfill_es2018 = __commonJS({
       exports3.WritableStream = WritableStream;
       exports3.WritableStreamDefaultController = WritableStreamDefaultController;
       exports3.WritableStreamDefaultWriter = WritableStreamDefaultWriter;
-    });
+    }));
   }
 });
 
@@ -5203,7 +5203,7 @@ var isSameProtocol = (destination, original) => {
 
 // node_modules/node-fetch/src/body.js
 var pipeline = (0, import_node_util.promisify)(import_node_stream.default.pipeline);
-var INTERNALS = Symbol("Body internals");
+var INTERNALS = /* @__PURE__ */ Symbol("Body internals");
 var Body = class {
   constructor(body, {
     size = 0
@@ -5594,7 +5594,7 @@ var Headers = class _Headers extends URLSearchParams {
   /**
    * For better console.log(headers) and also to convert Headers into Node.js Request compatible format
    */
-  [Symbol.for("nodejs.util.inspect.custom")]() {
+  [/* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom")]() {
     return [...this.keys()].reduce((result, key) => {
       const values = this.getAll(key);
       if (key === "host") {
@@ -5639,7 +5639,7 @@ var isRedirect = (code) => {
 };
 
 // node_modules/node-fetch/src/response.js
-var INTERNALS2 = Symbol("Response internals");
+var INTERNALS2 = /* @__PURE__ */ Symbol("Response internals");
 var Response = class _Response extends Body {
   constructor(body = null, options = {}) {
     super(body, options);
@@ -5911,7 +5911,7 @@ function parseReferrerPolicyFromHeader(headers) {
 }
 
 // node_modules/node-fetch/src/request.js
-var INTERNALS3 = Symbol("Request internals");
+var INTERNALS3 = /* @__PURE__ */ Symbol("Request internals");
 var isRequest = (object) => {
   return typeof object === "object" && typeof object[INTERNALS3] === "object";
 };
@@ -6092,7 +6092,7 @@ var getNodeRequestOptions = (request) => {
     path: parsedURL.pathname + search,
     // The following options are not expressed in the URL
     method: request.method,
-    headers: headers[Symbol.for("nodejs.util.inspect.custom")](),
+    headers: headers[/* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom")](),
     insecureHTTPParser: request.insecureHTTPParser,
     agent
   };
